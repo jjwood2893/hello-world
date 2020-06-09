@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class SacredGeometryIO {
+
+	public static void main(String[] args) {
+		int effectiveSpellLevel;
+		int knowledgeRanks;
+		System.out.println("Welcome to the Sacred Geometry Calculator!\n");
+		System.out.print("Please enter the effective spell level for the spell you are casting");
+
+		boolean validInput = false;
+		while (!validInput) {
+			try {
+				Scanner input = new Scanner(System.in);
+				String effectiveSpellLevelString = input.nextLine();
+				effectiveSpellLevel = Integer.parseInt(effectiveSpellLevelString);
+				if (effectiveSpellLevel <= 9 && effectiveSpellLevel > 0) {
+					validInput = true;
+				} else {
+					NumberFormatException e;
+				}
+				
+			} catch (Exception e) {
+				System.out.println("Sorry, please enter a number between 1 and 9.");
+			}
+
+		}
+	}
+
+}
