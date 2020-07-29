@@ -1,0 +1,90 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    background-color: palevioletred;
+    border-style: double;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 100px 100px 100px 300px;
+    grid-template-columns: 100px 100px auto;
+    grid-template-areas:
+    "sky tower sky2"
+    "sky tower sky2"
+    "sky tower sky2"
+    "ground ground2 ground3"
+    ;
+    border-radius: 10px;
+}
+
+#sky {
+    background-color: skyblue;
+    grid-area: sky;
+}
+
+#tower {
+    position: relative;
+    background-color: gray;
+    grid-area: tower;
+    display: grid;
+    grid-template-rows: repeat(4 1fr);
+    grid-template-columns: repeat (3 1fr);
+    grid-template-areas:
+    ". . ."
+    ". window1 ."
+    ". . ."
+    ". window2 door"
+    ;
+}
+
+#window1, #window2 {
+    background-color: black;
+    height: 10px;
+    width: 5px;
+}
+
+#window1 {
+    grid-area: window1;
+}
+
+#window2 {
+    grid-area: window2;
+}
+
+#door {
+    background-color: brown;
+    width: 15px;
+    height: 25px;
+    grid-area: door;
+    position: absolute;
+    bottom: 0;
+}
+
+#ground {
+    background-color: green;
+    grid-area: ground;
+    border-bottom-left-radius: 10px;
+
+}
+
+#ground2 {
+    background-color: green;
+    grid-area: ground2;
+}
+
+#ground3 {
+    background-color: green;
+    grid-area: ground3;
+    border-bottom-right-radius: 10px;
+}
+
+#sky2 {
+    background-color: skyblue;
+    grid-area: sky2;
+}
